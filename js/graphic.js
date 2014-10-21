@@ -39,7 +39,7 @@ function render(width) {
 
     var height = .88 * width;
 
-    var circleSize = .1 * width;
+    var circleSize = 0.065 * width;
 
     var  projection = d3.geo.mercator()
         .scale(width*4)
@@ -91,7 +91,7 @@ function render(width) {
         //scale for circle
         var scale = d3.scale.sqrt()
             .domain(d3.extent(areas))
-            .range([3, circleSize]);
+            .range([4, circleSize]);
 
         //draw county shapes
         svg.selectAll(".subunit")
